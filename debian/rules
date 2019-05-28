@@ -12,7 +12,6 @@ override_dh_auto_configure:
 	                     --enable-gupnp \
 	                     --enable-gtk-doc \
 	                     --with-gstreamer \
-	                     --with-gstreamer-1.5 \
 	                     --enable-introspection \
 	                     --with-ignored-network-interface-prefix=docker
 
