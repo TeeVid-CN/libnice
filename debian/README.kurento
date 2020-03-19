@@ -41,10 +41,6 @@ Kurento changes from Debian maintainer
   - --with-gstreamer-1.5: Needed to generate GStreamer packages that can be used
     with Kurento fork of GStreamer.
 
-  - --with-ignored-network-interface-prefix=docker: Use this flag to skip all
-    local interfaces that belong to Docker containers, when Kurento runs in a
-    host machine that runs the Docker daemon.
-
 
 
 Debug symbols
