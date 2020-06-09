@@ -7,6 +7,7 @@ override_dh_autoreconf:
 	dh_autoreconf "NOCONFIGURE=1 ./autogen.sh"
 
 override_dh_auto_configure:
+	CFLAGS="${CFLAGS} -DG_DISABLE_ASSERT" \
 	dh_auto_configure -- --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 	                     --enable-compile-warnings=yes \
 	                     --enable-gupnp \
