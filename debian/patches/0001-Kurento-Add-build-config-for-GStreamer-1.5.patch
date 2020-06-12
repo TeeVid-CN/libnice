@@ -8,7 +8,7 @@ Subject: Kurento: Add build config for GStreamer 1.5
  2 files changed, 44 insertions(+)
 
 diff --git a/configure.ac b/configure.ac
-index ddcc4e4..5c62f01 100644
+index 30fd7ee..cd2c201 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -244,6 +244,11 @@ AC_ARG_WITH(gstreamer,
@@ -63,7 +63,7 @@ index ddcc4e4..5c62f01 100644
  AM_CONDITIONAL(WITH_GSTREAMER010, test "$with_gstreamer010" = yes)
  
 diff --git a/gst/Makefile.am b/gst/Makefile.am
-index 5f9a386..f25c1f5 100644
+index 8776780..3f771c9 100644
 --- a/gst/Makefile.am
 +++ b/gst/Makefile.am
 @@ -36,6 +36,23 @@ libgstnice_la_LIBADD = 	$(COMMON_LIBADD) $(GST_LIBS)
