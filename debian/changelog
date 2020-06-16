@@ -1,3 +1,29 @@
+libnice (0.1.17-0kurento1) testing; urgency=medium
+
+  * Sync debian/ with packager commit '8c207dc'
+  * Add debian/ file changes required for Kurento
+  * Update debian/changelog with new snapshot version
+  * debian/control: Add pkg-create-dbgsym to build dependencies
+  * README.kurento: Add notes about debug packages in Ubuntu 18.04
+  * debian/patches: Cherry Pick old patches for Kurento
+  * Rebase debian/patches with upstream commit '5496500'
+  * New snapshot version for Kurento: '0.1.15-1kurento2'
+  * debian/patches: Apply upstream MR !15
+  * Upstream MR !15 was merged, remove our patch
+  * Remove patch 'Add connecting -> gathering possible state'
+  * debian/gbp: Configure for Kurento fork build
+  * debian/control: Force installing 'pkg-create-dbgsym' in 16.04
+  * Prepare release 0.1.15-1kurento3
+  * debian/README: List upstream and package repos
+  * debian/rules: Don't run ./configure twice, rewrite README.kurento
+  * debian/rules: Disable assert (#define NDEBUG 1)
+  * Kurento debian/rules: rely on default ignored interface names
+  * debian/rules: Use G_DISABLE_ASSERT to disable libnice asserts
+  * debian/README.kurento: Extend with more details and explanations
+  * debian/patches: add fix to libnice issue 113
+
+ -- Juan Navarro <juan.navarro@gmx.es>  Tue, 16 Jun 2020 10:29:15 +0200
+
 libnice (0.1.16-1) unstable; urgency=medium
 
   * Team upload.
