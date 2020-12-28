@@ -119,6 +119,14 @@ nice_udp_bsd_socket_new (NiceAddress *addr)
     return NULL;
   }
 
+  GError *opt_err = NULL;
+  if (!g_socket_set_option (gsock, SOL_SOCKET, SO_RCVBUF, 4194304, &opt_err)) {
+    g_clear_error (&opt_err);
+  }
+  if (!g_socket_set_option (gsock, SOL_SOCKET, SO_SNDBUF, 4194304, &opt_err)) {
+    g_clear_error (&opt_err);
+  }
+
   /* GSocket: All socket file descriptors are set to be close-on-exec. */
   g_socket_set_blocking (gsock, false);
   gaddr = g_socket_address_new_from_native (&name.addr, sizeof (name));
